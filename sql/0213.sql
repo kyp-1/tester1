@@ -51,6 +51,12 @@ set FI_PRICE = FI_PRICE+500;
 update FOOD_INFO
 set FI_PRICE = FI_PRICE*1.1;
 
+select * from FOOD_INFO
+order by FI_PRICE DESC;
+
+select * from FOOD_INFO
+order by FI_NAME;
+
 where FI_PRICE>=4000 and FI_NAME like '%라%'   ##   = 와 like 의 사용에 유의
 ;
 
