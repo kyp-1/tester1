@@ -56,10 +56,22 @@ public class UserInfoCRUD {
 		return 0;
 	}
 	
+	public static int updateUserInfo(String uiName, String uiName2) {
+		try {
+			Statement stmt = con.createStatement();
+			String sql = "UPDATE USER_INFO SET UI_NAME='"+uiName + "' " + " WHERE UI_NAME='"+uiName2+"'";
+			return stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 	public static void main(String[] args) {
 		int result = insertUserInfo("홍길동","hong","r1r2r3");
 		System.out.println("입력한 갯수 : " + result);
-		result = deleteUserInfo("7");
+		result = deleteUserInfo("9");
 		System.out.println("삭제한 갯수 : " + result);
+		result = updateUserInfo("김홍동","강아지");
+		System.out.println("입력한 갯수 : " + result);
 	}
 }

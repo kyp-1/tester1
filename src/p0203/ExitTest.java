@@ -7,7 +7,7 @@ public class ExitTest {
 			System.out.println(i);
 			if(i==5) {
 				return;
-			}
+			}	
 		}
 		System.out.println("반복문이 종료되었습니다.");
 	}
